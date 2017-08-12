@@ -1,0 +1,239 @@
+.before 
+	content: ""
+	background-image: url(../img/header_icons.png)
+	background-position: 0 -6px
+	background-repeat: no-repeat
+	position: absolute
+	top: 0
+	left: -5px
+	padding: 9px
+	+mdesktop
+		left: -10px
+header 
+	padding: 0
+	background: #3b2f2f
+	margin-bottom: 20px
+	.contact 
+		padding: 0
+		font-size: 16px
+		border-bottom: 1px solid #770e3f
+		&__tel 
+			display: inline-block
+			border-right: 1px solid #770e3f
+			padding: 25px 15px
+			+mdesktop 
+				padding: 25px 10px 25px 14px
+			+stablet
+				border: none
+				padding: 16px
+			&_link 
+				text-decoration: none
+				display: inline-block
+				color: #fff
+				padding: 0 20px
+				position: relative
+				+mdesktop 
+					padding: 0 15px
+				+mtablet
+					display: none
+				+stablet 
+					padding: 0  0 0 15px
+				&_icon 
+					+mtablet
+						display: inline-block
+					&::before
+						content: ""
+						background-image: url(../img/header_icons.png)
+						background-position: 0 -6px
+						background-repeat: no-repeat
+						position: absolute
+						top: 0
+						left: -5px
+						padding: 9px
+		&__call-back 
+			@extend .contact__tel
+			&_link 
+				@extend .contact__tel_link
+				+mtablet
+					display: inline-block
+				&::before 
+					@extend .before
+					background-position: -35px -4px
+		&__email 
+			@extend .contact__tel
+			&_link 
+				@extend .contact__tel_link
+				+mtablet
+					display: inline-block
+				+stablet
+					font-size: 0
+					padding: 11px 0
+				+mphone 
+					font-size: 16px
+					padding: 0  0 0 15px
+				&::before 
+					@extend .before
+					background-position: -75px -4px
+		&__time
+			@extend .contact__tel
+			+mdesktop
+				display: none
+			&_link 
+				@extend .contact__tel_link
+				+mtablet
+					display: inline-block
+		&__basket 
+			@extend .contact__tel
+			&_link 
+				@extend .contact__tel_link
+				+mtablet
+					display: inline-block
+				&::before 
+					@extend .before
+					background-position: -114px -3px
+					padding: 11px 13px
+					top: -10px
+				span 
+					position: absolute
+					top: -24px
+					right: 13px
+					background-color: #846345
+					padding: 3px 7px
+					border-radius: 50%
+					font-size: 12px
+					+mdesktop 
+						right: 2px
+					+mtablet
+						right: -6px
+		&__user 
+			@extend .contact__tel
+			border: none
+			&_link 
+				@extend .contact__tel_link
+				padding: 7px 16px
+				+mtablet
+					display: inline-block
+				&::before 
+					@extend .before
+					background-position: -162px -1px
+					padding: 12px 15px
+					top: 0
+	.center-row
+		padding: 5px
+		overflow: hidden
+		.logo
+			text-decoration: none
+			color: #fefefe
+			+stablet
+				margin-right: 50px
+			img 
+				width: auto
+				max-width: 100%
+				display: inline-block
+			p 
+				display: inline-block
+				border-left: 1px solid #161111
+				padding: 24px 0 0 20px
+				margin-left: 16px
+				font-size: 16px
+				+mtablet
+					display: none
+		&__form
+			display: inline-block
+			width: 392px
+			max-width: 100%
+			margin: 0 0 0 75px
+			position: relative
+			+mdesktop
+				margin: 0 0 0 20px
+			+mtablet 
+				margin: 0
+			+mphone 
+				margin: 20px 0 0
+			input 
+				width: 100%
+				padding: 10px
+				border: 1px solid #fff
+				background: transparent
+				color: #fff
+			button 
+				position: absolute
+				top: 5px
+				right: 10px
+				padding: 14px
+				border: none
+				background: url(../img/header_icons.png) -210px 0 no-repeat
+		p 
+			font-size: 16px
+			color: #fff
+			padding: 0 20px		
+			display: inline-block
+			+mdesktop 
+				display: none
+	.main-nav
+		padding: 0;
+		font-size: 18px;
+		background: #836346;
+		position: relative;
+		margin: 10px 0 0;
+		&::before
+			content: "";
+			padding: 10px 50%;
+			background: url(../img/nav-shadow.gif) 0 0 repeat-x;
+			position: absolute;
+			top: -7px;
+			left: 0;
+		&_open 
+			padding: 10px 0
+			overflow: hidden
+			display: none
+			+stablet
+				display: block
+			p 
+				font-weight: bold
+				color: #fff
+				font-size: 22px
+				float: left
+				margin: 7px 0 0 20px
+		&_button 
+			width: 45px
+			padding: 4px 4px 4px 1px
+			background: #625959
+			float: right
+			cursor: pointer
+			margin: 0 20px 0 0
+			border-radius: 4px
+			span 
+				background: #efd7ac
+				padding: 2px 16px
+				display: block
+				margin: 5px
+		&__list
+			list-style: none
+			padding: 0
+			margin: 0
+			overflow: hidden
+			+stablet
+				display: none
+		&__item 
+			display: inline-block
+			padding: 20px 17px
+			border-left: 1px solid #aa8666
+			&:first-child 
+				border: none
+			+ldesktop 
+				padding: 20px 9px
+			+mtablet 
+				border: none
+				padding: 10px 30px
+			+stablet 
+				display: block
+				width: 50%
+				padding: 10px 0 10px 22px
+				float: left
+		&__link 
+			text-decoration: none
+			color: #fff
+			transition: all .3s
+			&:hover
+				color: #aa8666

@@ -1,0 +1,4 @@
+mixin cards(item)
+	div(class=`card ${item.bg}`)
+		h3.card__title: a(href="#", class=`card__link card__link--${item.icons}`)= item.title
+		p.card__txt= item.txt

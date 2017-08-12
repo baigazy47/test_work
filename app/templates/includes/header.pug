@@ -1,0 +1,39 @@
+header
+	.contact
+		.container
+			.contact__tel
+				a.contact__tel_link.contact__tel_link_icon(href="#") +7 495 223-34-13
+				a.contact__tel_link(href="#") +7 499 505-50-04
+			.contact__call-back
+				a.contact__call-back_link(href="#") Обратный звонок
+			.contact__email
+				a.contact__email_link(href="#") Напишите нам
+			.contact__time
+				a.contact__time_link(href="#") Москва
+					span пн-пт 10:00-18:00
+			.contact__basket
+				a.contact__basket_link(href="#")
+					span 4
+			.contact__user
+				a.contact__user_link(href="#")
+	.center-row
+		.container
+			a.logo(href="#") 
+				img(src="upload/logo.png")
+				p Магазин винных шкафов   
+			form.center-row__form
+				button(type="submit")
+				input(type="text" name="text")
+			p  Сделано во Франции
+	nav.main-nav
+		.container
+			#open-nav.main-nav_open
+				p Menu
+				.main-nav_button
+					span
+					span
+					span
+			ul#nav-content.main-nav__list
+				each item in menu_item
+					li.main-nav__item: a.main-nav__link(href="#")= item
+			

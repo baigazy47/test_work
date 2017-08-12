@@ -1,0 +1,27 @@
+$smd: 479px
+$xmd: 767px
+$md: 991px
+$lsmd: 1024px
+$lmd: 1174px
+$lxmd: 1200px
+
+
+
+=mphone 
+	@media screen and (max-width: $smd)
+		@content
+=stablet 
+	@media screen and (max-width: $xmd)
+		@content
+=mtablet 
+	@media screen and (max-width: $md)
+		@content
+=sdesktop 
+	@media screen and (max-width: $lsmd)
+		@content
+=mdesktop 
+	@media screen and (max-width: $lmd)
+		@content
+=ldesktop 
+	@media screen and (max-width: $lxmd)
+		@content
